@@ -1,5 +1,5 @@
 export type RootStackParamList = {
-    Home: undefined;
-    AddItems: undefined;
+    SplashScreen: undefined;
+    InformationScreen: undefined;
     FilterItems: undefined;
   };
