@@ -16,3 +16,17 @@ export default function SplashScreen({navigation, route}: SplashScreenProps) {
 
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+  
+    WelcomeText: {
+      fontSize: 20,
+    },
+  
+  });

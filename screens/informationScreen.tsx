@@ -9,8 +9,28 @@ import React from 'react';
 
 type InformationScreenProps = NativeStackScreenProps<RootStackParamList, "InformationScreen">;
 export default function informationScreen({navigation, route}: InformationScreenProps) {
+    return(
+        <View style={styles.container}>
 
+
+        </View>
+
+    );
 
 
 
 }
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+  
+    WelcomeText: {
+      fontSize: 20,
+    },
+  
+  });
