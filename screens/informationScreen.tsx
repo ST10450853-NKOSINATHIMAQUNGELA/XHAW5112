@@ -29,7 +29,7 @@ export default function InformationScreen({navigation}: InformationScreenProps) 
         <View style={styles.fixToText}>
           <Button title='6-Month couses' onPress={() => navigation.navigate("SixMonthsScreen")}/>
 
-          <Button title='6-Week courses'></Button>
+          <Button title='6-Week courses' onPress={() => navigation.navigate("SixWeekScreen")}/>
         </View>
 
         </View>

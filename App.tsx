@@ -10,6 +10,7 @@ import { RootStackParamList } from './types';
 import SplashScreen from './screens/SplashScreen';
 import InformationScreen from './screens/InformationScreen';
 import SixMonthScreen from './screens/SixMonthsScreen';
+import SixWeekScreen from './screens/SixWeekScreen';
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
         <Stack.Screen name="InformationScreen" component={InformationScreen}/>
         <Stack.Screen name="SplashScreen" component={SplashScreen}/>
         <Stack.Screen name="SixMonthsScreen" component={SixMonthScreen}/>
+        <Stack.Screen name="SixWeekScreen" component={SixWeekScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
     
