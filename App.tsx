@@ -9,6 +9,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { RootStackParamList } from './types';
 import SplashScreen from './screens/SplashScreen';
 import InformationScreen from './screens/InformationScreen';
+import SixMonthScreen from './screens/SixMonthsScreen';
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
@@ -16,8 +17,8 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName='SplashScreen'>
         <Stack.Screen name="InformationScreen" component={InformationScreen}/>
-        <Stack.Screen name='SplashScreen' component={SplashScreen}/>
-
+        <Stack.Screen name="SplashScreen" component={SplashScreen}/>
+        <Stack.Screen name="SixMonthsScreen" component={SixMonthScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
     

@@ -1,6 +1,6 @@
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TextComponent, View } from 'react-native';
 import { Image } from 'react-native';
 import { Button } from 'react-native';
 import { RootStackParamList } from '../types';
@@ -10,7 +10,8 @@ import React from 'react';
 type InformationScreenProps =  NativeStackScreenProps<RootStackParamList, "InformationScreen">;
 export default function InformationScreen({navigation}: InformationScreenProps) {
     return(
-        <View style={styles.container}>
+      <View style={styles.container}>
+        <View >
           <Image style={styles.image} source={require('../Img_/Empowering_The_Nation.jpg')}/>
           <Text style={styles.MainText}> 
             Skills training for domestic Workers and Gardeners
@@ -19,13 +20,25 @@ export default function InformationScreen({navigation}: InformationScreenProps) 
           <Text style={styles.SecondaryText}> Empowering the Nation was established in 2018 and offers courses in Johannesburg.
             Hundreds of domestic Workers and Gardeners have been trained on both the six-month long learnerships
             and six-week short skills training programs to empower themselves and help provide more marketable skills. 
-             </Text>
+          </Text>
 
-          <Button title='6-week couses'></Button>
-          <Button title='6-month courses'></Button>
+          <Text style={styles.SecondaryText}>
+          We offer a range of courses with 2 different time periods, six week courses and six month courses. Press the buttons below for more information.
+          </Text>
+          
+        <View style={styles.fixToText}>
+          <Button title='6-Month couses' onPress={() => navigation.navigate("SixMonthsScreen")}/>
+
+          <Button title='6-Week courses'></Button>
         </View>
-        
 
+        </View>
+
+       
+
+    
+        
+      </View>
     );
 
 
@@ -44,7 +57,7 @@ const styles = StyleSheet.create({
     image: {
       width: 250,
       height: 300,
-
+     alignSelf: 'center' 
     },
   
     MainText: {
@@ -55,14 +68,16 @@ const styles = StyleSheet.create({
 
     SecondaryText: {
       fontSize: 20,
+      fontStyle: 'italic',
       textAlign: 'center',
       paddingTop: 30,
 
     },
 
-    sixWeekButton: {
-      alignItems: 'center',
-      fontSize: 19,
+    fixToText: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    padding: 30,
     }
   
   });
