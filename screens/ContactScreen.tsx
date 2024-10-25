@@ -7,10 +7,14 @@ import { RootStackParamList } from '../types';
 import React from 'react';
 import { useState } from 'react';
 
+
+
 type ContactScreenProps = NativeStackScreenProps<RootStackParamList, 'ContactScreen'>;
 export default function ContactScreen({navigation}: ContactScreenProps){
+ 
+
     return(
-        <ScrollView>
+        <ScrollView style={styles.scrollView}>
         <View style={styles.input}>
         <TextInput placeholder='Full Name'/>
         </View>
@@ -22,9 +26,17 @@ export default function ContactScreen({navigation}: ContactScreenProps){
         <View style={styles.input}>
             <TextInput placeholder='Phone Number'/>
         </View>
+
+        <View style={styles.input}>
+            <TextInput placeholder='Enter your message'/>
+        </View>
+
+        <View>
+            <Button title='Send message'/>
+        </View>
         </ScrollView>
     )
-}
+};
 const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -64,11 +76,11 @@ const styles = StyleSheet.create({
     },
 
     input: {
-        borderWidth: 1,
-        padding: 8,
+        borderWidth: 2,
+        padding: 10,
         borderRadius: 5,
-        marginBottom: 10,
-        fontSize: 29,
+        marginBottom: 14,
+        fontSize: 30,
     }
 
 })

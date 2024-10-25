@@ -5,4 +5,5 @@ export type RootStackParamList = {
     SixWeekScreen: undefined;
     EnrollmentScreen: undefined;
     ContactScreen: undefined;
+    CalculateScreen: undefined;
   };

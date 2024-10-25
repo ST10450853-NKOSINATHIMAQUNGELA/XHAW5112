@@ -32,6 +32,12 @@ export default function InformationScreen({navigation}: InformationScreenProps) 
           <Button title='6-Week courses' onPress={() => navigation.navigate("SixWeekScreen")}/>
         </View>
 
+        <View style={styles.fixToText}>
+          <Button title='Contact details' onPress={() => navigation.navigate("ContactScreen")}/>
+
+          <Button title='Calculate Fees' onPress={() => navigation.navigate("CalculateScreen")}/>
+        </View>
+
         </View>
 
        
@@ -55,7 +61,7 @@ const styles = StyleSheet.create({
     },
 
     image: {
-      width: 250,
+      width: 400,
       height: 300,
      alignSelf: 'center' 
     },

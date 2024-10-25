@@ -12,6 +12,8 @@ import InformationScreen from './screens/InformationScreen';
 import SixMonthScreen from './screens/SixMonthsScreen';
 import SixWeekScreen from './screens/SixWeekScreen';
 import EnrollmentScreen from './screens/EnrollmentScreen';
+import CalculateScreen from './screens/CalculateFees';
+import ContactScreen from './screens/ContactScreen';
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
@@ -23,6 +25,8 @@ export default function App() {
         <Stack.Screen name="SixMonthsScreen" component={SixMonthScreen}/>
         <Stack.Screen name="SixWeekScreen" component={SixWeekScreen}/>
         <Stack.Screen name="EnrollmentScreen" component={EnrollmentScreen}/>
+        <Stack.Screen name="CalculateScreen" component={CalculateScreen}/>
+        <Stack.Screen name="ContactScreen" component={ContactScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
     
