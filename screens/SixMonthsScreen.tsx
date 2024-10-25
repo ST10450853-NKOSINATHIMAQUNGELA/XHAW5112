@@ -8,6 +8,12 @@ import React from 'react';
 
 type SixMonthScreenProps = NativeStackScreenProps <RootStackParamList, "SixMonthsScreen">;
 export default function SixMonthScreen({navigation}: SixMonthScreenProps){
+let FirstAidfee: number = 1500;
+let Sewingfee: number = 1500;
+let landscapingfee: number = 1500;
+let LifeSkillsfee: number =1500;
+
+
     return(
         <ScrollView style={styles.scrollView}>
             <Image style={styles.image} source={require('../Img_/Empowering_The_Nation.jpg')}/>
@@ -22,7 +28,7 @@ export default function SixMonthScreen({navigation}: SixMonthScreenProps){
                 </Text>
 
                 <Text style={styles.HeadingTwo}>
-                    Fees: R1500
+                    Fees: R{FirstAidfee}
                 </Text>
 
                 <Text style={styles.HeadingThree}>
@@ -48,7 +54,7 @@ export default function SixMonthScreen({navigation}: SixMonthScreenProps){
                 </Text>
 
                 <Text style={styles.HeadingTwo}>
-                    Fees: R1500
+                    Fees: R{Sewingfee}
                 </Text>
 
                 <Text style={styles.HeadingThree}>
@@ -74,7 +80,7 @@ export default function SixMonthScreen({navigation}: SixMonthScreenProps){
                 </Text>
 
                 <Text style={styles.HeadingTwo}>
-                    Fees: R1500
+                    Fees: R{landscapingfee}
                 </Text>
 
                 <Text style={styles.HeadingThree}>
@@ -100,7 +106,7 @@ export default function SixMonthScreen({navigation}: SixMonthScreenProps){
                 </Text>
 
                 <Text style={styles.HeadingTwo}>
-                    Fees: R1500
+                    Fees: R{LifeSkillsfee}
                 </Text>
 
                 <Text style={styles.HeadingThree}>

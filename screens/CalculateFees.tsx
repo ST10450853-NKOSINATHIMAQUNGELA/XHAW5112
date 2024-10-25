@@ -8,43 +8,39 @@ import React from 'react';
 import { useState } from 'react';
 import RadioButton from 'react-native-paper/lib/typescript/components/RadioButton/RadioButton';
 import CheckBox from '@react-native-community/checkbox';
-
 const courses = [
     { id: '1', name: 'First Aid', price: 1500 },
     { id: '2', name: 'Sewing', price: 1500 },
     { id: '3', name: 'Landscaping', price: 1500 },
-    { id: '4', name: 'Life skills', price: 1500 },
+    { id: '4', name: 'Life Skills', price: 1500 },
     { id: '5', name: 'Garden Maintenance', price: 750 },
     { id: '6', name: 'Cooking', price: 750 },
     { id: '7', name: 'Child Minding', price: 750 },
-  ];
-  
- 
-  const calculateDiscount = (count: number) => {
+];
+const calculateDiscount = (count: number) => {
     if (count > 3) return 0.2;
     if (count === 3) return 0.1;  
     if (count === 2) return 0.05; 
-    return 0; 
-  };
+    return 0;
+};
 
 type CalculateScreenProps = NativeStackScreenProps<RootStackParamList, "CalculateScreen">;
 export default function CalculateScreen ({navigation}: CalculateScreenProps) {
-
-    const [selectedCourses, setSelectedCourses] = useState<string[]>([]);
+ const [selectedCourses, setSelectedCourses] = useState<string[]>([]);
 
     const toggleCourseSelection = (courseId: string, isSelected: boolean) => {
         setSelectedCourses((prevSelected) =>
-          isSelected ? [...prevSelected, courseId] : prevSelected.filter((id) => id !== courseId)
+            isSelected ? [...prevSelected, courseId] : prevSelected.filter((id) => id !== courseId)
         );
-      };
-    
-      const calculateTotalPrice = () => {
+    };
+
+    const calculateTotalPrice = () => {
         const selectedCourseData = courses.filter((course) => selectedCourses.includes(course.id));
         const totalPrice = selectedCourseData.reduce((sum, course) => sum + course.price, 0);
         const discount = calculateDiscount(selectedCourses.length);
-        const discountedPrice = totalPrice * (1 - discount);
-        return discountedPrice.toFixed(2); 
-      };
+        const discountedPrice = totalPrice * (1- discount);
+        return discountedPrice.toFixed(2);
+    };
     
     
     return(
@@ -57,24 +53,16 @@ export default function CalculateScreen ({navigation}: CalculateScreenProps) {
                 </Text>
 
                 <Text style={styles.HeadingTwo}>
-                Select the courses you want to enroll in, and see the total fee with applicable discounts
+                Selected courses
                 </Text>
             </View>
+            
 
-                
-        {courses.map((course) => (
-          <View key={course.id} style={styles.courseItem}>
-            <CheckBox
-              value={selectedCourses.includes(course.id)}
-              onValueChange={(isSelected) => toggleCourseSelection(course.id, isSelected)}
-            />
-            <Text style={styles.courseText}>{course.name} - ${course.price}</Text>
-          </View>
-        ))}
-
-
+    
             <View>
-            <Text style={styles.MainHeading}>Total Price: ${calculateTotalPrice()}</Text>
+            <Text style={styles.HeadingThree}>{selectedCourses.length}</Text>
+
+            <Text style={styles.HeadingThree}>Total Price: R{calculateTotalPrice()}</Text>
             </View>
 
        </ScrollView>

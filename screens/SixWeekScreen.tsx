@@ -8,7 +8,12 @@ import React from 'react';
 
 type SixWeekScreenProps = NativeStackScreenProps <RootStackParamList, "SixWeekScreen">;
 export default function SixWeekScreen({navigation}: SixWeekScreenProps){
+let Gardenfee: number= 750;
+let Cookingfee: number= 750;
+let ChildMindingfee: number= 750
+
     return(
+
         <ScrollView style={styles.scrollView}>
             <Image style={styles.image} source={require('../Img_/Empowering_The_Nation.jpg')}/>
 
@@ -22,7 +27,7 @@ export default function SixWeekScreen({navigation}: SixWeekScreenProps){
                 </Text>
 
                 <Text style={styles.HeadingTwo}>
-                    Fees: R750
+                    Fees: R{Gardenfee}
                 </Text>
 
                 <Text style={styles.HeadingThree}>
@@ -46,7 +51,7 @@ export default function SixWeekScreen({navigation}: SixWeekScreenProps){
                 </Text>
 
                 <Text style={styles.HeadingTwo}>
-                    Fees: R750
+                    Fees: R{Cookingfee}
                 </Text>
 
                 <Text style={styles.HeadingThree}>
@@ -71,7 +76,7 @@ export default function SixWeekScreen({navigation}: SixWeekScreenProps){
                 </Text>
 
                 <Text style={styles.HeadingTwo}>
-                    Fees: R750
+                    Fees: R{ChildMindingfee}
                 </Text>
 
                 <Text style={styles.HeadingThree}>
