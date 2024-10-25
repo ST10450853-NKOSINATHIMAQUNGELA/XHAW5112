@@ -37,7 +37,7 @@ export default function SixWeekScreen({navigation}: SixWeekScreenProps){
                 <Text style={styles.bulletPoint}>• Pruning and propagation of plants</Text>
                 <Text style={styles.bulletPoint}>• Planting techniques for different plant types</Text>
 
-                <Button title='Enroll'/>
+                <Button title='Enroll' onPress={() => navigation.navigate("EnrollmentScreen")} />
             </View>
 
             <View>
@@ -62,7 +62,7 @@ export default function SixWeekScreen({navigation}: SixWeekScreenProps){
                 <Text style={styles.bulletPoint}>• Planning meals</Text>
                 <Text style={styles.bulletPoint}>• Preparation and cooking of meals</Text>
 
-                <Button title='Enroll'/>
+                <Button title='Enroll' onPress={() => navigation.navigate("EnrollmentScreen")} />
             </View>
 
             <View>
@@ -87,7 +87,7 @@ export default function SixWeekScreen({navigation}: SixWeekScreenProps){
                 <Text style={styles.bulletPoint}>• Toddler needs</Text>
                 <Text style={styles.bulletPoint}>• Educational toys</Text>
 
-                <Button title='Enroll'/>
+                <Button title='Enroll' onPress={() => navigation.navigate("EnrollmentScreen")} />
             </View>
 
         </ScrollView>

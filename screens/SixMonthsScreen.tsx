@@ -39,7 +39,7 @@ export default function SixMonthScreen({navigation}: SixMonthScreenProps){
                 <Text style={styles.bulletPoint}>• Cardio-Pulmonary Resuscitation (CPR)</Text>
                 <Text style={styles.bulletPoint}>• Respitory distress (e.g., choking, blocked airway)</Text>
 
-                <Button title='Enroll'/>
+                <Button title='Enroll' onPress={() => navigation.navigate("EnrollmentScreen")} />
             </View>
 
             <View>
@@ -65,7 +65,7 @@ export default function SixMonthScreen({navigation}: SixMonthScreenProps){
                 <Text style={styles.bulletPoint}>• Alterations</Text>
                 <Text style={styles.bulletPoint}>• Designing and sewing new garments</Text>
 
-                <Button title='Enroll'/>
+                <Button title='Enroll' onPress={() => navigation.navigate("EnrollmentScreen")} />
             </View>
 
             <View>
@@ -91,7 +91,7 @@ export default function SixMonthScreen({navigation}: SixMonthScreenProps){
                 <Text style={styles.bulletPoint}>• Aesthetics of plant shapes and colors</Text>
                 <Text style={styles.bulletPoint}>• Garden layout </Text>
 
-                <Button title='Enroll'/>
+                <Button title='Enroll' onPress={() => navigation.navigate("EnrollmentScreen")} />
             </View>
 
             <View>
@@ -117,7 +117,7 @@ export default function SixMonthScreen({navigation}: SixMonthScreenProps){
                 <Text style={styles.bulletPoint}>• Basic numeric literacy</Text>
               
 
-                <Button title='Enroll'/>
+                <Button title='Enroll' onPress={() => navigation.navigate("EnrollmentScreen")} />
             </View>
 
         </ScrollView>

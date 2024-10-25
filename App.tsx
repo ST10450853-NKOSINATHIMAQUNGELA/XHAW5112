@@ -11,6 +11,7 @@ import SplashScreen from './screens/SplashScreen';
 import InformationScreen from './screens/InformationScreen';
 import SixMonthScreen from './screens/SixMonthsScreen';
 import SixWeekScreen from './screens/SixWeekScreen';
+import EnrollmentScreen from './screens/EnrollmentScreen';
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
         <Stack.Screen name="SplashScreen" component={SplashScreen}/>
         <Stack.Screen name="SixMonthsScreen" component={SixMonthScreen}/>
         <Stack.Screen name="SixWeekScreen" component={SixWeekScreen}/>
+        <Stack.Screen name="EnrollmentScreen" component={EnrollmentScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
     
