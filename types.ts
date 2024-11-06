@@ -6,4 +6,5 @@ export type RootStackParamList = {
     EnrollmentScreen: undefined;
     ContactScreen: undefined;
     CalculateScreen: undefined;
+    SewingScreen: undefined;
   };

@@ -100,30 +100,12 @@ let LifeSkillsfee: number =1500;
                 <Button title='Enroll' onPress={() => navigation.navigate("EnrollmentScreen")} />
             </View>
 
-            <View>
-            <Text style={styles.HeadingOne}>
+            <View style={styles.fixToText}>
+            <Text style={styles.HeadingThree}>
                     Life Skills
-                </Text>
-
-                <Text style={styles.HeadingTwo}>
-                    Fees: R{LifeSkillsfee}
-                </Text>
-
-                <Text style={styles.HeadingThree}>
-                   <Text style={styles.HeadingTwo}>Purpose:</Text>  To provide skills to navigate basic life necessities
-                </Text>
-
-                <Text style={styles.HeadingTwo}>
-                    Content:
-                </Text>
+            </Text>
+            <Button title='View course'/>
                 
-                <Text style={styles.bulletPoint}>• Opening a bank account</Text>
-                <Text style={styles.bulletPoint}>• Basic labor law (know your rights)</Text>
-                <Text style={styles.bulletPoint}>• Basic reading and writing literacy</Text>
-                <Text style={styles.bulletPoint}>• Basic numeric literacy</Text>
-              
-
-                <Button title='Enroll' onPress={() => navigation.navigate("EnrollmentScreen")} />
             </View>
 
         </ScrollView>
@@ -183,7 +165,7 @@ const styles = StyleSheet.create({
     fixToText: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    padding: 30,
+    padding: 20,
     }
   
   });
