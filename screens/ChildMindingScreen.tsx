@@ -6,44 +6,50 @@ import { Button } from 'react-native';
 import { RootStackParamList } from '../types';
 import React from 'react';
 
-type LandscapingScreenProps = NativeStackScreenProps <RootStackParamList, "LandscapingScreen">;
-export default function LandscapingScreen({navigation}: LandscapingScreenProps){
-  let landscapingfee: number = 1500;
 
-  return(
-    <View style={styles.scrollView}>
-      <Text style={styles.HeadingOne}>
-                    Landscaping
+type ChildMindingScreenProps = NativeStackScreenProps <RootStackParamList, "ChildMindingScreen">
+export default function ChildMindingScreen({navigation}: ChildMindingScreenProps){
+    let ChildMindingfee: number= 750
+    return(
+        <View style={styles.scrollView}>
+           <Text style={styles.HeadingOne}>
+                    Child Minding
                 </Text>
 
                 <Text style={styles.HeadingTwo}>
-                    Fees: R{landscapingfee}
+                    Fees: R{ChildMindingfee}
                 </Text>
 
                 <Text style={styles.HeadingThree}>
-                   <Text style={styles.HeadingTwo}>Purpose:</Text> To provide landscaping services for new and established gardens
+                   <Text style={styles.HeadingTwo}>Purpose:</Text> To provide basic child and baby care.
                 </Text>
 
                 <Text style={styles.HeadingTwo}>
                     Content:
                 </Text>
                 
-                <Text style={styles.bulletPoint}>• Indigenous and exotic plants and trees</Text>
-                <Text style={styles.bulletPoint}>• Fixed structures (fountains, statues, benches, etc.)</Text>
-                <Text style={styles.bulletPoint}>• Balancing of plants and trees in a garden</Text>
-                <Text style={styles.bulletPoint}>• Aesthetics of plant shapes and colors</Text>
-                <Text style={styles.bulletPoint}>• Garden layout </Text>
+                <Text style={styles.bulletPoint}>• Birth to six-month-old baby needs</Text>
+                <Text style={styles.bulletPoint}>• Seven-month to one-year-old needs</Text>
+                <Text style={styles.bulletPoint}>• Toddler needs</Text>
+                <Text style={styles.bulletPoint}>• Educational toys</Text>
 
                 <View style={styles.backButton}>
                 <Button title='Enroll' onPress={() => navigation.navigate("EnrollmentScreen")} />
                 </View>
 
                 <View style={styles.backButton}>
-                <Button title='Back' onPress={() => navigation.navigate("SixMonthsScreen")}/>
+                <Button title='Back' onPress={() => navigation.navigate("SixWeekScreen")}/>
                 </View>
-    </View>
-  )
-};
+        </View>
+    )
+}
+
+
+
+
+
+
+
 
 
 

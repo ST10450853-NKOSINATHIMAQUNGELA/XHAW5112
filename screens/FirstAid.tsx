@@ -8,6 +8,46 @@ import React from 'react';
 
 
 
+type FirstAidScreenProps = NativeStackScreenProps <RootStackParamList, "FirstAidScreen">;
+export default function FirstAidScreen({navigation}: FirstAidScreenProps){
+  
+  
+  let FirstAidfee: number = 1500;
+  return(
+    <View style={styles.scrollView}>
+       <Text style={styles.HeadingOne}>
+                    First Aid
+                </Text>
+
+                <Text style={styles.HeadingTwo}>
+                    Fees: R{FirstAidfee}
+                </Text>
+
+                <Text style={styles.HeadingThree}>
+                   <Text style={styles.HeadingTwo}>Purpose:</Text> To provide first aid awareness and basic life support
+                </Text>
+
+                <Text style={styles.HeadingTwo}>
+                    Content:
+                </Text>
+                
+                <Text style={styles.bulletPoint}>• Wounds and Bleading</Text>
+                <Text style={styles.bulletPoint}>• Burns and Fractures</Text>
+                <Text style={styles.bulletPoint}>• Emergency scene management</Text>
+                <Text style={styles.bulletPoint}>• Cardio-Pulmonary Resuscitation (CPR)</Text>
+                <Text style={styles.bulletPoint}>• Respitory distress (e.g., choking, blocked airway)</Text>
+
+                <View style={styles.backButton}>
+                <Button title='Enroll' onPress={() => navigation.navigate("EnrollmentScreen")} />
+                </View>
+
+                <View style={styles.backButton}>
+                <Button title='Back' onPress={() => navigation.navigate("SixMonthsScreen")}/>
+                </View>
+    </View>
+
+  );
+}
 
 const styles = StyleSheet.create({
     container: {
@@ -62,6 +102,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     padding: 20,
-    }
+    },
+
+    backButton: {
+      padding: 20,
+      justifyContent: "center"
+  }
+
   
   });

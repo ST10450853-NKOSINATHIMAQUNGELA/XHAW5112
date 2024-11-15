@@ -8,11 +8,6 @@ import React from 'react';
 
 type SixMonthScreenProps = NativeStackScreenProps <RootStackParamList, "SixMonthsScreen">;
 export default function SixMonthScreen({navigation}: SixMonthScreenProps){
-let FirstAidfee: number = 1500;
-let Sewingfee: number = 1500;
-let landscapingfee: number = 1500;
-let LifeSkillsfee: number =1500;
-
 
     return(
         <ScrollView style={styles.scrollView}>
@@ -22,90 +17,41 @@ let LifeSkillsfee: number =1500;
                 Six-Month Courses
             </Text>
 
-            <View>
-                <Text style={styles.HeadingOne}>
+            <View style={styles.fixToText}>
+            <Text style={styles.HeadingThree}>
                     First Aid
-                </Text>
-
-                <Text style={styles.HeadingTwo}>
-                    Fees: R{FirstAidfee}
-                </Text>
-
-                <Text style={styles.HeadingThree}>
-                   <Text style={styles.HeadingTwo}>Purpose:</Text> To provide first aid awareness and basic life support
-                </Text>
-
-                <Text style={styles.HeadingTwo}>
-                    Content:
-                </Text>
+            </Text>
+            <Button title='View course' onPress={() => navigation.navigate("FirstAidScreen")}/>
                 
-                <Text style={styles.bulletPoint}>• Wounds and Bleading</Text>
-                <Text style={styles.bulletPoint}>• Burns and Fractures</Text>
-                <Text style={styles.bulletPoint}>• Emergency scene management</Text>
-                <Text style={styles.bulletPoint}>• Cardio-Pulmonary Resuscitation (CPR)</Text>
-                <Text style={styles.bulletPoint}>• Respitory distress (e.g., choking, blocked airway)</Text>
-
-                <Button title='Enroll' onPress={() => navigation.navigate("EnrollmentScreen")} />
             </View>
 
-            <View>
-            <Text style={styles.HeadingOne}>
+
+            <View style={styles.fixToText}>
+            <Text style={styles.HeadingThree}>
                     Sewing
-                </Text>
-
-                <Text style={styles.HeadingTwo}>
-                    Fees: R{Sewingfee}
-                </Text>
-
-                <Text style={styles.HeadingThree}>
-                   <Text style={styles.HeadingTwo}>Purpose:</Text> To provide alterations and new garment tailoring services
-                </Text>
-
-                <Text style={styles.HeadingTwo}>
-                    Content:
-                </Text>
+            </Text>
+            <Button title='View course' onPress={() => navigation.navigate("SewingScreen")}/>
                 
-                <Text style={styles.bulletPoint}>• Types of stitches</Text>
-                <Text style={styles.bulletPoint}>• Threading a sewing machine</Text>
-                <Text style={styles.bulletPoint}>• Sewing buttons, zips, hems, and seams</Text>
-                <Text style={styles.bulletPoint}>• Alterations</Text>
-                <Text style={styles.bulletPoint}>• Designing and sewing new garments</Text>
-
-                <Button title='Enroll' onPress={() => navigation.navigate("EnrollmentScreen")} />
             </View>
 
-            <View>
-            <Text style={styles.HeadingOne}>
+            <View style={styles.fixToText}>
+            <Text style={styles.HeadingThree}>
                     Landscaping
-                </Text>
-
-                <Text style={styles.HeadingTwo}>
-                    Fees: R{landscapingfee}
-                </Text>
-
-                <Text style={styles.HeadingThree}>
-                   <Text style={styles.HeadingTwo}>Purpose:</Text> To provide landscaping services for new and established gardens
-                </Text>
-
-                <Text style={styles.HeadingTwo}>
-                    Content:
-                </Text>
+            </Text>
+            <Button title='View course' onPress={() => navigation.navigate("LandscapingScreen")}/>
                 
-                <Text style={styles.bulletPoint}>• Indigenous and exotic plants and trees</Text>
-                <Text style={styles.bulletPoint}>• Fixed structures (fountains, statues, benches, etc.)</Text>
-                <Text style={styles.bulletPoint}>• Balancing of plants and trees in a garden</Text>
-                <Text style={styles.bulletPoint}>• Aesthetics of plant shapes and colors</Text>
-                <Text style={styles.bulletPoint}>• Garden layout </Text>
-
-                <Button title='Enroll' onPress={() => navigation.navigate("EnrollmentScreen")} />
             </View>
 
             <View style={styles.fixToText}>
             <Text style={styles.HeadingThree}>
                     Life Skills
             </Text>
-            <Button title='View course'/>
+            <Button title='View course' onPress={() => navigation.navigate("LifeSkillsScreen")}/>
                 
+            </View>
+
+            <View style={styles.backButton}>
+                <Button title='Back' onPress={() => navigation.navigate("InformationScreen")}/>
             </View>
 
         </ScrollView>
@@ -153,7 +99,7 @@ const styles = StyleSheet.create({
     },
 
     HeadingThree: {
-        fontSize: 19,
+        fontSize: 25,
         paddingTop: 15,
     },
 
@@ -166,6 +112,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     padding: 20,
+    },
+
+    backButton: {
+        padding: 20,
+        justifyContent: "center"
     }
   
   });

@@ -5,12 +5,13 @@ import { Image } from 'react-native';
 import { Button } from 'react-native';
 import { RootStackParamList } from '../types';
 import React from 'react';
+import CookingScreen from './CookingScreen';
 
 type SixWeekScreenProps = NativeStackScreenProps <RootStackParamList, "SixWeekScreen">;
 export default function SixWeekScreen({navigation}: SixWeekScreenProps){
-let Gardenfee: number= 750;
-let Cookingfee: number= 750;
-let ChildMindingfee: number= 750
+
+
+
 
     return(
 
@@ -21,80 +22,31 @@ let ChildMindingfee: number= 750
                 Six-Week Courses
             </Text>
 
-            <View>
-                <Text style={styles.HeadingOne}>
+            
+            <View style={styles.fixToText}>
+            <Text style={styles.HeadingThree}>
                     Garden Maintenance
-                </Text>
-
-                <Text style={styles.HeadingTwo}>
-                    Fees: R{Gardenfee}
-                </Text>
-
-                <Text style={styles.HeadingThree}>
-                   <Text style={styles.HeadingTwo}>Purpose:</Text> To provide basic knowledge of watering, pruning, and planting in a domestic garden.
-                </Text>
-
-                <Text style={styles.HeadingTwo}>
-                    Content:
-                </Text>
-                
-                <Text style={styles.bulletPoint}>• Water restrictions and watering requirements of indigenous and exotic plants</Text>
-                <Text style={styles.bulletPoint}>• Pruning and propagation of plants</Text>
-                <Text style={styles.bulletPoint}>• Planting techniques for different plant types</Text>
-
-                <Button title='Enroll' onPress={() => navigation.navigate("EnrollmentScreen")} />
+            </Text>
+            <Button title='View course' onPress={() => navigation.navigate("GardenMaintenanceScreen")}/>
             </View>
 
-            <View>
-            <Text style={styles.HeadingOne}>
-                    Cooking
-                </Text>
-
-                <Text style={styles.HeadingTwo}>
-                    Fees: R{Cookingfee}
-                </Text>
-
-                <Text style={styles.HeadingThree}>
-                   <Text style={styles.HeadingTwo}>Purpose:</Text> To prepare and cook nutritious family meals.
-                </Text>
-
-                <Text style={styles.HeadingTwo}>
-                    Content:
-                </Text>
-                
-                <Text style={styles.bulletPoint}>• Nutritional requirements for a healthy body</Text>
-                <Text style={styles.bulletPoint}>• Types of protein, carbohydrates, and vegetables</Text>
-                <Text style={styles.bulletPoint}>• Planning meals</Text>
-                <Text style={styles.bulletPoint}>• Preparation and cooking of meals</Text>
-
-                <Button title='Enroll' onPress={() => navigation.navigate("EnrollmentScreen")} />
+            <View style={styles.fixToText}>
+            <Text style={styles.HeadingThree}>
+                Cooking
+            </Text>
+            <Button title='View course' onPress={() => navigation.navigate("CookingScreen")}/>
             </View>
 
-            <View>
-            <Text style={styles.HeadingOne}>
-                    Child Minding
-                </Text>
-
-                <Text style={styles.HeadingTwo}>
-                    Fees: R{ChildMindingfee}
-                </Text>
-
-                <Text style={styles.HeadingThree}>
-                   <Text style={styles.HeadingTwo}>Purpose:</Text> To provide basic child and baby care.
-                </Text>
-
-                <Text style={styles.HeadingTwo}>
-                    Content:
-                </Text>
-                
-                <Text style={styles.bulletPoint}>• Birth to six-month-old baby needs</Text>
-                <Text style={styles.bulletPoint}>• Seven-month to one-year-old needs</Text>
-                <Text style={styles.bulletPoint}>• Toddler needs</Text>
-                <Text style={styles.bulletPoint}>• Educational toys</Text>
-
-                <Button title='Enroll' onPress={() => navigation.navigate("EnrollmentScreen")} />
+            <View style={styles.fixToText}>
+            <Text style={styles.HeadingThree}>
+                Child Minding
+            </Text>
+            <Button title='View course' onPress={() => navigation.navigate("ChildMindingScreen")}/>
             </View>
 
+            <View style={styles.backButton}>
+            <Button title='Back' onPress={() => navigation.navigate("InformationScreen")}/>
+            </View>
         </ScrollView>
 
     );
@@ -154,6 +106,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     padding: 30,
+    },
+    
+    backButton: {
+        padding: 20,
+        justifyContent: "center"
     }
+  
   
   });

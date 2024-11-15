@@ -6,6 +6,7 @@ import { Button } from 'react-native';
 import { RootStackParamList } from '../types';
 import React from 'react';
 import { useState } from 'react';
+import CheckBox from '@react-native-community/checkbox';
 import { Picker } from '@react-native-picker/picker';
 
 const courses = ['First Aid - R1500', 'Sewing - R1500', 'Landscaping - R1500', 'Life Skills - R1500', 'Child Minding - R750',
@@ -50,8 +51,12 @@ const [course, setCourse] = useState(courses[0]);
                 </Picker>
             </View>
 
-            <View>
+            <View style={styles.button}>
                 <Button title='Enroll & Pay'/>
+            </View>
+
+            <View style={styles.button}>
+            <Button title='Back' onPress={() => navigation.navigate("InformationScreen")}/>
             </View>
 
         </ScrollView>
@@ -66,6 +71,13 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
       paddingBottom: 350
+    },
+
+    button:{
+        justifyContent: "center",
+        padding: 20,
+    
+        
     },
 
     image: {

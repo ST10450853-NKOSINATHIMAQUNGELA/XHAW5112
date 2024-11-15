@@ -6,44 +6,50 @@ import { Button } from 'react-native';
 import { RootStackParamList } from '../types';
 import React from 'react';
 
-type LandscapingScreenProps = NativeStackScreenProps <RootStackParamList, "LandscapingScreen">;
-export default function LandscapingScreen({navigation}: LandscapingScreenProps){
-  let landscapingfee: number = 1500;
 
-  return(
-    <View style={styles.scrollView}>
-      <Text style={styles.HeadingOne}>
-                    Landscaping
+type CookingScreenProps = NativeStackScreenProps <RootStackParamList, "CookingScreen">
+export default function CookingScreen({navigation}: CookingScreenProps){
+    let Cookingfee: number= 750;
+    return(
+        <View style={styles.scrollView}>
+            <Text style={styles.HeadingOne}>
+                    Cooking
                 </Text>
 
                 <Text style={styles.HeadingTwo}>
-                    Fees: R{landscapingfee}
+                    Fees: R{Cookingfee}
                 </Text>
 
                 <Text style={styles.HeadingThree}>
-                   <Text style={styles.HeadingTwo}>Purpose:</Text> To provide landscaping services for new and established gardens
+                   <Text style={styles.HeadingTwo}>Purpose:</Text> To prepare and cook nutritious family meals.
                 </Text>
 
                 <Text style={styles.HeadingTwo}>
                     Content:
                 </Text>
                 
-                <Text style={styles.bulletPoint}>• Indigenous and exotic plants and trees</Text>
-                <Text style={styles.bulletPoint}>• Fixed structures (fountains, statues, benches, etc.)</Text>
-                <Text style={styles.bulletPoint}>• Balancing of plants and trees in a garden</Text>
-                <Text style={styles.bulletPoint}>• Aesthetics of plant shapes and colors</Text>
-                <Text style={styles.bulletPoint}>• Garden layout </Text>
+                <Text style={styles.bulletPoint}>• Nutritional requirements for a healthy body</Text>
+                <Text style={styles.bulletPoint}>• Types of protein, carbohydrates, and vegetables</Text>
+                <Text style={styles.bulletPoint}>• Planning meals</Text>
+                <Text style={styles.bulletPoint}>• Preparation and cooking of meals</Text>
 
                 <View style={styles.backButton}>
                 <Button title='Enroll' onPress={() => navigation.navigate("EnrollmentScreen")} />
                 </View>
 
                 <View style={styles.backButton}>
-                <Button title='Back' onPress={() => navigation.navigate("SixMonthsScreen")}/>
+                <Button title='Back' onPress={() => navigation.navigate("SixWeekScreen")}/>
                 </View>
-    </View>
-  )
-};
+        </View>
+    )
+}
+
+
+
+
+
+
+
 
 
 

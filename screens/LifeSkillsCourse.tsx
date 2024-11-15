@@ -6,6 +6,45 @@ import { Button } from 'react-native';
 import { RootStackParamList } from '../types';
 import React from 'react';
 
+type LifeSkillsScreenProps = NativeStackScreenProps <RootStackParamList, "LifeSkillsScreen">
+export default function LifeSkillsScreen({navigation}: LifeSkillsScreenProps){
+  let LifeSkillsfee: number =1500;
+  return(
+    <View style={styles.scrollView}>
+      <Text style={styles.HeadingOne}>
+        Life Skills
+      </Text>
+
+      <Text style={styles.HeadingTwo}>
+        Fees: R{LifeSkillsfee}
+      </Text>
+
+      <Text style={styles.HeadingThree}>
+          <Text style={styles.HeadingTwo}>Purpose:</Text> To provide skills to navigate basic life necessities
+      </Text>
+
+      <Text style={styles.HeadingTwo}>
+        Content:
+      </Text>
+            
+      <Text style={styles.bulletPoint}>• Opening a back account</Text>
+      <Text style={styles.bulletPoint}>• Basic labour law (Know your rights)</Text>
+      <Text style={styles.bulletPoint}>• Basic reading and writing literacy</Text>
+      <Text style={styles.bulletPoint}>• Basic numeric literacy</Text>
+                
+
+
+              <View style={styles.backButton}>
+                <Button title='Enroll' onPress={() => navigation.navigate("EnrollmentScreen")} />
+              </View>
+
+              <View style={styles.backButton}>
+                <Button title='Back' onPress={() => navigation.navigate("SixMonthsScreen")}/>
+              </View>
+
+    </View>
+  )
+}
 
 
 
@@ -67,6 +106,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     padding: 20,
-    }
+    },
+
+    backButton: {
+      padding: 20,
+      justifyContent: "center"
+  }
+
   
   });

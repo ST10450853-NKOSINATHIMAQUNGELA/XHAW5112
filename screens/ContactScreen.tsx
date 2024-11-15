@@ -31,12 +31,18 @@ export default function ContactScreen({navigation}: ContactScreenProps){
             <TextInput placeholder='Enter your message'/>
         </View>
 
-        <View>
+        <View style={styles.backButton}>
             <Button title='Send message'/>
         </View>
+
+        <View style={styles.backButton}>
+            <Button title='Back' onPress={() => navigation.navigate("InformationScreen")}/>
+            </View>
         </ScrollView>
     )
 };
+
+
 const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -81,6 +87,12 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         marginBottom: 14,
         fontSize: 30,
+    },
+    
+    backButton: {
+        padding: 20,
+        justifyContent: "center"
     }
+  
 
 })

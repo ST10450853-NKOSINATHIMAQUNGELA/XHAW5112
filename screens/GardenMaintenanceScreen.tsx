@@ -6,46 +6,42 @@ import { Button } from 'react-native';
 import { RootStackParamList } from '../types';
 import React from 'react';
 
-type LandscapingScreenProps = NativeStackScreenProps <RootStackParamList, "LandscapingScreen">;
-export default function LandscapingScreen({navigation}: LandscapingScreenProps){
-  let landscapingfee: number = 1500;
 
-  return(
-    <View style={styles.scrollView}>
-      <Text style={styles.HeadingOne}>
-                    Landscaping
+type GardenMaintenanceScreenProps = NativeStackScreenProps <RootStackParamList, "GardenMaintenanceScreen">
+export default function GardenMaintenanceScreen({navigation}: GardenMaintenanceScreenProps){
+    let Gardenfee: number= 750;
+    return(
+        <View style={styles.scrollView}>
+            <Text style={styles.HeadingOne}>
+                    Garden Maintenance
                 </Text>
 
                 <Text style={styles.HeadingTwo}>
-                    Fees: R{landscapingfee}
+                    Fees: R{Gardenfee}
                 </Text>
 
                 <Text style={styles.HeadingThree}>
-                   <Text style={styles.HeadingTwo}>Purpose:</Text> To provide landscaping services for new and established gardens
+                   <Text style={styles.HeadingTwo}>Purpose:</Text> To provide basic knowledge of watering, pruning, and planting in a domestic garden.
                 </Text>
 
                 <Text style={styles.HeadingTwo}>
                     Content:
                 </Text>
                 
-                <Text style={styles.bulletPoint}>• Indigenous and exotic plants and trees</Text>
-                <Text style={styles.bulletPoint}>• Fixed structures (fountains, statues, benches, etc.)</Text>
-                <Text style={styles.bulletPoint}>• Balancing of plants and trees in a garden</Text>
-                <Text style={styles.bulletPoint}>• Aesthetics of plant shapes and colors</Text>
-                <Text style={styles.bulletPoint}>• Garden layout </Text>
+                <Text style={styles.bulletPoint}>• Water restrictions and watering requirements of indigenous and exotic plants</Text>
+                <Text style={styles.bulletPoint}>• Pruning and propagation of plants</Text>
+                <Text style={styles.bulletPoint}>• Planting techniques for different plant types</Text>
 
                 <View style={styles.backButton}>
                 <Button title='Enroll' onPress={() => navigation.navigate("EnrollmentScreen")} />
                 </View>
 
                 <View style={styles.backButton}>
-                <Button title='Back' onPress={() => navigation.navigate("SixMonthsScreen")}/>
+                <Button title='Back' onPress={() => navigation.navigate("SixWeekScreen")}/>
                 </View>
-    </View>
-  )
-};
-
-
+        </View>
+    )
+}
 
 
 

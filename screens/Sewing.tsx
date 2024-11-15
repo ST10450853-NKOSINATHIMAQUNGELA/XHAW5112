@@ -8,10 +8,42 @@ import React from 'react';
 
 type SewingScreenProps = NativeStackScreenProps <RootStackParamList, "SewingScreen">;
 export default function SewingScreen({navigation}: SewingScreenProps){
+  let Sewingfee: number = 1500;
 
-    return(
-        <View></View>
-    )
+return(
+  <View style={styles.scrollView}>   
+    <Text style={styles.HeadingOne}>
+        Sewing
+    </Text>
+
+    <Text style={styles.HeadingTwo}>
+        Fees: R{Sewingfee}
+    </Text>
+
+    <Text style={styles.HeadingThree}>
+       <Text style={styles.HeadingTwo}>Purpose:</Text> To provide alterations and new garment tailoring services
+    </Text>
+
+    <Text style={styles.HeadingTwo}>
+        Content:
+    </Text>
+    
+    <Text style={styles.bulletPoint}>• Types of stitches</Text>
+    <Text style={styles.bulletPoint}>• Threading a sewing machine</Text>
+    <Text style={styles.bulletPoint}>• Sewing buttons, zips, hems, and seams</Text>
+    <Text style={styles.bulletPoint}>• Alterations</Text>
+    <Text style={styles.bulletPoint}>• Designing and sewing new garments</Text>
+
+    <View style={styles.backButton}>
+      <Button title='Enroll' onPress={() => navigation.navigate("EnrollmentScreen")} />
+    </View>
+
+    <View style={styles.backButton}>
+      <Button title='Back' onPress={() => navigation.navigate("SixMonthsScreen")}/>
+    </View>
+
+  </View>
+  )
 }
 
 
@@ -70,6 +102,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     padding: 20,
-    }
+    },
+
+    backButton: {
+      padding: 20,
+      justifyContent: "center"
+  }
+
   
   });
